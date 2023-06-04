@@ -34,7 +34,10 @@ const Home = () => {
     <div className="container">
       {data.map((val) => (
         <div key={val.id} className="box" onClick={() => gettingInfo(val)}>
-          <img src={`https://picsum.photos/200?random=${val.id}`} alt="image" />
+          <img
+            src={`https://picsum.photos/200?random=${val.id}`}
+            alt={`image ${val.id}`}
+          />
           <p>User Id: {val.id}</p>
           <p className="title">Title:{val.title}</p>
           <p className="des">Body:{val.body}</p>
